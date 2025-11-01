@@ -43,7 +43,6 @@ reactjs18-3d-portfolio/
 ├   ├   ├   └── Header.tsx
 ├   ├   ├── canvas/
 ├   ├   ├   ├── Ball.tsx
-├   ├   ├   ├── Computers.tsx
 ├   ├   ├   ├── Earth.tsx
 ├   ├   ├   ├── Stars.tsx
 ├   ├   ├   └── index.ts
@@ -79,11 +78,6 @@ reactjs18-3d-portfolio/
 ├       ├── [[...]].{svg,png}
 ├       └── index.ts
 ├── public/
-├   ├── desktop_pc
-├   ├   ├── textures/[[...]].png
-├   ├   ├── license.txt
-├   ├   ├── scene.bin
-├   ├   └── scene.gltf
 ├   ├── planet
 ├   ├   ├── textures/[[...]].png
 ├   ├   ├── license.txt

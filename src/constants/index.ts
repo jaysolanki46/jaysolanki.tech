@@ -25,9 +25,9 @@ import {
   figma,
   docker,
   meta,
-  starbucks,
-  tesla,
-  shopify,
+  fis,
+  humm,
+  skyzer,
   carrent,
   jobit,
   tripguide,
@@ -51,19 +51,19 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "Web Developer",
+    title: "Web Development",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "API Development",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Backend Development",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Cloud Engineering (AWS)",
     icon: creator,
   },
 ];
@@ -125,55 +125,42 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Software Developer",
+    companyName: "Freightways Information Services",
+    icon: fis,
+    iconBg: "#ffff",
+    date: "Apr 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Design, develop, and maintain backend APIs using C# and .NET across multiple projects in an enterprise environment.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Implement and monitor AWS cloud infrastructure, focusing on scalability, performance, and cost optimization.",
+      "Integrate and fine-tune application monitoring through New Relic and CloudWatch, reducing alert noise and improving system visibility."
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
+    title: "Software Developer",
+    companyName: "Humm group",
+    icon: humm,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Feb 2022 - Apr 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained microservices in C# (.NET) and Java (Java EE, Spring MVC, Hibernate) for payment and financial services.",
+      "Designed and integrated RESTful APIs with third-party payment providers and internal systems for seamless transactions.",
+      "Built Single Page Applications (SPA) with React.js, creating dynamic interfaces for payment workflows.",
+      "Deployed applications to AWS environments via DevOps CI/CD pipelines, collaborating with Product Owners and QA on requirements, testing, and delivery."
     ],
   },
   {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "Software Developer",
+    companyName: "Skyzer NZ",
+    icon: skyzer,
+    iconBg: "#ffff",
+    date: "Dec 2019 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed, tested, and implemented new software solutions, including a booking service for customer support teams to efficiently record calls.",
+      "Maintained and enhanced the terminal management system, handling security, maintenance, support, and ongoing fixes for EFTPOS operations.",
+      "Integrated third-party APIs with EFTPOS terminals to improve payment processing and system interoperability.",
+      "Designed and implemented test automation scripts using a Selenium automation framework to ensure software quality.",
     ],
   },
 ];

@@ -12,26 +12,29 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
-  html,
+
+  net,
+  csharp,
+  java,
+  react,
   css,
-  reactjs,
-  redux,
-  tailwind,
+  typescript,
   nodejs,
-  mongodb,
-  git,
-  figma,
+  aws,
+  azure,
+  mysql,
+  oracle,
   docker,
-  meta,
+  newrelic,
+  postman,
+  git,
+
   fis,
   humm,
   skyzer,
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -40,8 +43,12 @@ export const navLinks: TNavLink[] = [
     title: "Introduction",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "tech",
+    title: "Technologies",
   },
   {
     id: "contact",
@@ -70,57 +77,61 @@ const services: TService[] = [
 
 const technologies: TTechnology[] = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "C#",
+    icon: csharp,
   },
   {
-    name: "CSS 3",
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "React JS",
+    icon: react,
+  },
+  {
+    name: "CSS",
     icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
   },
   {
     name: "TypeScript",
     icon: typescript,
   },
   {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "AWS",
+    icon: aws,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Azure",
+    icon: azure,
   },
   {
-    name: "git",
-    icon: git,
+    name: "MySQL",
+    icon: mysql,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Oracle",
+    icon: oracle,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
+  {
+    name: "New Relic",
+    icon: newrelic,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+  {
+    name: "Git",
+    icon: git,
+  }
 ];
 
 const experiences: TExperience[] = [

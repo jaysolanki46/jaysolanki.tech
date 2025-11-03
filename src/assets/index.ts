@@ -7,21 +7,23 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import net from "./tech/dotnet.svg";
+import csharp from "./tech/csharp.svg";
+import java from "./tech/java.svg";
+import react from "./tech/reactjs.png";
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import nodejs from "./tech/nodejs.png";
+import aws from "./tech/aws.svg";
+import azure from "./tech/azure.svg";
+import mysql from "./tech/mysql.svg";
+import oracle from "./tech/oracle.svg";
+import docker from "./tech/docker.png";
+import newrelic from "./tech/newrelic.svg";
+import postman from "./tech/postman.svg";
+import git from "./tech/git.svg";
 
-import meta from "./company/meta.png";
+
 import fis from "./company/fis.png";
 import humm from "./company/humm.png";
 import skyzer from "./company/skyzer.png";
@@ -39,20 +41,23 @@ export {
   github,
   menu,
   close,
+ 
+  net,
+  csharp,
+  java,
+  react,
   css,
-  docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
   typescript,
-  threejs,
-  meta,
+  nodejs,
+  aws,
+  azure,
+  mysql,
+  oracle,
+  docker,
+  newrelic,
+  postman,
+  git,
+
   fis,
   humm,
   skyzer,

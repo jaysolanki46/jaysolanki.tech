@@ -32,6 +32,11 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import mujeeb from "./testimonials/mujeeb.jpg";
+import sharanya from "./testimonials/sharanya.jpg";
+import kishan from "./testimonials/kishan.jpg";
+import axita from "./testimonials/axita.jpg";
+
 export {
   logo,
   backend,
@@ -64,4 +69,9 @@ export {
   carrent,
   jobit,
   tripguide,
+
+  mujeeb,
+  sharanya,
+  kishan,
+  axita
 };

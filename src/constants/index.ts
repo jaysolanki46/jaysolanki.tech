@@ -13,7 +13,6 @@ import {
   creator,
   web,
 
-  net,
   csharp,
   java,
   react,
@@ -35,6 +34,11 @@ import {
   carrent,
   jobit,
   tripguide,
+
+  mujeeb,
+  sharanya,
+  kishan,
+  axita
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -49,6 +53,10 @@ export const navLinks: TNavLink[] = [
   {
     id: "tech",
     title: "Technologies",
+  },
+  {
+    id: "testimonials",
+    title: "Testimonials",
   },
   {
     id: "contact",
@@ -179,27 +187,35 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Jaykumar is an exceptional software engineer with deep expertise in .NET and Java. He consistently delivers high-quality solutions and excels at mentoring junior colleagues. His clear communication and technical guidance make him an invaluable asset to any team.",
+    name: "Mujeeb Mughal",
+    designation: "Software Team Practice Lead",
+    company: "Humm group",
+    image: mujeeb,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Jay is a highly skilled and adaptable developer with strong problem-solving abilities and deep knowledge of multiple programming languages and frameworks. He collaborates effectively with teams and stakeholders, communicates clearly, and consistently delivers high-quality results. I highly recommend him for any development role or project.",
+    name: "Sharanya Prakash",
+    designation: "Application & Operation Specialist",
+    company: "Humm group",
+    image: sharanya,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Jay is an exceptionally skilled and analytical Software Developer. He consistently delivers creative solutions to complex problems, is patient, solution-oriented, and dedicated. His expertise and professionalism make him an invaluable team member, and I highly recommend him.",
+    name: "Kishan Rabari",
+    designation: "Software Implementation Engineer",
+    company: "Tevalis New Zealand",
+    image: kishan,
+  },
+  {
+    testimonial:
+      "Jay Solanki is a highly skilled and hardworking Software Developer, passionate about writing code and solving complex problems. With expertise in Java, .NET, SQL, and JavaScript, he consistently delivers innovative solutions. He is intelligent, forward-thinking, and also a supportive mentor, making him an invaluable asset to any team.",
+    name: "Axita Thakar ",
+    designation: "Service Desk Engineer",
+    company: "Theta (NZ)",
+    image: axita,
   },
 ];
 

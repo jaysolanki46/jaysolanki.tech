@@ -10,7 +10,7 @@ import Introduction from "./sections/Introduction";
 import Tech from "./sections/Tech";
 import Experience from "./sections/Experience";
 import Works from "./sections/Works";
-import Feedbacks from "./sections/Feedbacks";
+import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
 
@@ -21,7 +21,7 @@ export {
   Tech,
   Experience,
   Works,
-  Feedbacks,
+  Testimonials,
   Contact,
   CanvasLoader,
   EarthCanvas,

@@ -4,11 +4,11 @@ import {
   Introduction,
   Contact,
   Experience,
-  Feedbacks,
+  Testimonials,
   Hero,
   Navbar,
   Tech,
-  Works,
+  // Works,
   StarsCanvas,
 } from "./components";
 import { useEffect } from "react";
@@ -31,8 +31,8 @@ const App = () => {
         <Introduction />
         <Experience />
         <Tech />
-        <Works />
-        <Feedbacks />
+        {/* <Works /> */}  {/* Works section is currently commented out */}
+        <Testimonials />
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

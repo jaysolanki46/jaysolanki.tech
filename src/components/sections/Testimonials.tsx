@@ -6,8 +6,9 @@ import { testimonials } from "../../constants";
 import { Header } from "../atoms/Header";
 import { TTestimonial } from "../../types";
 import { config } from "../../constants/config";
+import { SectionWrapper } from "../../hoc";
 
-const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
+const TestimonialCard: React.FC<{ index: number } & TTestimonial> = ({
   index,
   testimonial,
   name,
@@ -44,7 +45,7 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   </motion.div>
 );
 
-const Feedbacks = () => {
+const Testimonials = () => {
   return (
     <div className="bg-black-100 mt-12 rounded-[20px]">
       <div
@@ -56,11 +57,11 @@ const Feedbacks = () => {
         className={`${styles.paddingX} -mt-20 flex flex-wrap gap-7 pb-14 max-sm:justify-center`}
       >
         {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          <TestimonialCard key={testimonial.name} index={index} {...testimonial} />
         ))}
       </div>
     </div>
   );
 };
 
-export default Feedbacks;
+export default SectionWrapper(Testimonials, "testimonials");

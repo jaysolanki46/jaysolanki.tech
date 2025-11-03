@@ -31,7 +31,7 @@ type TConfig = {
     };
   } & TSection;
   sections: {
-    about: Required<TSection>;
+    introduction: Required<TSection>;
     experience: TSection;
     feedbacks: TSection;
     works: Required<TSection>;
@@ -40,12 +40,12 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "Jay Solanki - Software Developer",
+    title: "Jaykumar Solanki | Software Developer & AWS Cloud Engineer",
     fullName: "Jay Solanki",
     email: "jaysolanki46@gmail.com",
   },
   hero: {
-    name: "Jay Solanki",
+    name: "Jaykumar Solanki",
     p: ["Software Developer specializing in scalable applications, cloud solutions, and modern software architecture"],
   },
   contact: {
@@ -64,14 +64,10 @@ export const config: TConfig = {
     },
   },
   sections: {
-    about: {
+    introduction: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `I’m Jaykumar Solanki, a Software Developer and AWS Cloud Engineer based in New Zealand. I specialize in building Web applications, scalable APIs, backend systems, and cloud solutions using modern technologies. Passionate about clean code, automation, and continuous learning, I enjoy turning complex problems into reliable software solutions.`,
     },
     experience: {
       p: "What I have done so far",

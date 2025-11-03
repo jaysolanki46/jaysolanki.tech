@@ -43,16 +43,16 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
   </Tilt>
 );
 
-const About = () => {
+const Introduction = () => {
   return (
     <>
-      <Header useMotion={true} {...config.sections.about} />
+      <Header useMotion={true} {...config.sections.introduction} />
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
       >
-        {config.sections.about.content}
+        {config.sections.introduction.content}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 max-sm:justify-center">
@@ -64,4 +64,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(Introduction, "introduction");

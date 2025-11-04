@@ -77,7 +77,7 @@ export const config: TConfig = {
     introduction: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I’m Jaykumar Solanki, a Software Developer and AWS Cloud Engineer based in New Zealand. I specialize in building Web applications, scalable APIs, backend systems, and cloud solutions using modern technologies. Passionate about clean code, automation, and continuous learning, I enjoy turning complex problems into reliable software solutions.`,
+      content: `I’m Jaykumar Solanki, a Software Developer and certified AWS Cloud Engineer based in New Zealand. I specialize in building Web applications, scalable APIs, backend systems, and cloud solutions using modern technologies. Passionate about clean code, automation, and continuous learning, I enjoy turning complex problems into reliable software solutions.`,
     },
     experience: {
       p: "What I have done so far",

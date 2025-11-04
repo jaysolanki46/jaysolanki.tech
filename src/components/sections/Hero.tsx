@@ -22,6 +22,19 @@ const Hero = () => {
             {config.hero.p[0]} <br className="hidden sm:block" />
             {config.hero.p[1]}
           </p>
+
+          <div className="mt-6">
+            <a
+              href="/jaykumar_solanki_cv.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download="jaykumar_solanki_cv.pdf"  // Added download filename
+              aria-label="Download CV"
+              className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none inline-block"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
       </div>
 

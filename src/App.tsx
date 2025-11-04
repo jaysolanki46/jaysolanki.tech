@@ -5,6 +5,7 @@ import {
   Contact,
   Experience,
   Testimonials,
+  Footer,
   Hero,
   Navbar,
   Tech,
@@ -37,6 +38,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

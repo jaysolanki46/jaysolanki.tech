@@ -13,6 +13,7 @@ import Works from "./sections/Works";
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
+import Footer from "./atoms/Footer";
 
 export {
   Hero,
@@ -22,6 +23,7 @@ export {
   Experience,
   Works,
   Testimonials,
+  Footer,
   Contact,
   CanvasLoader,
   EarthCanvas,

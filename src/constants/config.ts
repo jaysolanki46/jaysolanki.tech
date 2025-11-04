@@ -28,6 +28,11 @@ type TConfig = {
         span: string;
         placeholder: string;
       };
+    },
+    personalDetails?: {
+      phone: string;
+      address: string;
+      email: string;
     };
   } & TSection;
   sections: {
@@ -62,6 +67,11 @@ export const config: TConfig = {
         placeholder: "What do you want to say?",
       },
     },
+    personalDetails: {
+      phone: "+64-22-623-1640",
+      address: "Auckland, New Zealand",
+      email: "jaysolanki46@gmail.com"
+    }
   },
   sections: {
     introduction: {

@@ -19,21 +19,61 @@ const emailjsConfig = {
 };
 
 const Contact = () => {
-  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
-  const [form, setForm] = useState(INITIAL_STATE);
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [form, setForm] = useState<Record<string, string>>(INITIAL_STATE as Record<string, string>);
+  const [errors, setErrors] = useState<Record<string, string>>(Object.fromEntries(
+    Object.keys(config.contact.form).map((input) => [input, ""])
+  ) as Record<string, string>);
   const [loading, setLoading] = useState(false);
+
+  const validateField = (name: string, value: string) => {
+    const v = value.trim();
+    if (name === "name") {
+      if (!v) return "Name is required.";
+      if (v.length < 2) return "Name must be at least 2 characters.";
+      return "";
+    }
+
+    if (name === "email") {
+      if (!v) return "Email is required.";
+      // simple email regex
+      // eslint-disable-next-line no-useless-escape
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
+      if (!re.test(v)) return "Enter a valid email address.";
+      return "";
+    }
+
+    if (name === "message") {
+      if (!v) return "Message is required.";
+      if (v.length < 10) return "Message must be at least 10 characters.";
+      return "";
+    }
+
+    return "";
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
   ) => {
     if (e === undefined) return;
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
-    if (e === undefined) return;
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // run validation for all fields
+    const newErrors: Record<string, string> = {};
+    Object.keys(form).forEach((key) => {
+      newErrors[key] = validateField(key, form[key] ?? "");
+    });
+
+    setErrors(newErrors);
+
+    const hasErrors = Object.values(newErrors).some((v) => v !== "");
+    if (hasErrors) return;
+
     setLoading(true);
 
     emailjs
@@ -41,11 +81,11 @@ const Contact = () => {
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
         {
-          form_name: form.name,
+          form_name: (form.name || "").trim(),
           to_name: config.html.fullName,
-          from_email: form.email,
+          from_email: (form.email || "").trim(),
           to_email: config.html.email,
-          message: form.message,
+          message: (form.message || "").trim(),
         },
         emailjsConfig.accessToken
       )
@@ -54,7 +94,10 @@ const Contact = () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
 
-          setForm(INITIAL_STATE);
+          setForm(INITIAL_STATE as Record<string, string>);
+          setErrors(Object.fromEntries(
+            Object.keys(config.contact.form).map((input) => [input, ""])
+          ) as Record<string, string>);
         },
         (error) => {
           setLoading(false);
@@ -76,7 +119,6 @@ const Contact = () => {
         <Header useMotion={false} {...config.contact} />
 
         <form
-          // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
@@ -89,21 +131,31 @@ const Contact = () => {
             return (
               <label key={input} className="flex flex-col">
                 <span className="mb-4 font-medium text-white">{span}</span>
-                <Component
-                  type={input === "email" ? "email" : "text"}
-                  name={input}
-                  value={form[`${input}`]}
-                  onChange={handleChange}
-                  placeholder={placeholder}
-                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
-                  {...(input === "message" && { rows: 7 })}
-                />
+                <>
+                  <Component
+                    type={input === "email" ? "email" : "text"}
+                    name={input}
+                    value={form[`${input}`]}
+                    onChange={handleChange}
+                    placeholder={placeholder}
+                    className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                    {...(input === "message" && { rows: 7 })}
+                  />
+                  {errors[input] && (
+                    <p className="mt-2 text-sm text-red-400">{errors[input]}</p>
+                  )}
+                </>
               </label>
             );
           })}
           <button
             type="submit"
-            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none"
+            disabled={
+              loading ||
+              Object.values(errors).some((v) => v !== "") ||
+              Object.values(form).some((v) => (v || "").trim() === "")
+            }
+            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Sending..." : "Send"}
           </button>
